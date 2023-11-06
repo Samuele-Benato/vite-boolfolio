@@ -14,7 +14,7 @@ export default {
   
         <div class="row g-3">
             <div class="col-4 col-lg-3 col-md-6 col-sm-12 ">
-                <img class="img-fluid" :src="project.image" alt="project img">
+                <img class="img-fluid" :src="'http://127.0.0.1:8000/storage/' + project.image" alt="project img">
             </div>
             <div class="col-8 col-lg-9 col-md-6 col-sm-12 d-flex align-items-center">
                 <div class="row g-3 ">
