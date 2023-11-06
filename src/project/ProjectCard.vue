@@ -30,8 +30,9 @@ export default {
                     </div>
                     <div class="col-4">
                         <strong>Tecnologia: </strong>
-                        <div v-for="( technology in project.technologies)"></div>
+                        <div v-for=" technology in project.technologies">
                             {{ technology.label }} 
+                        </div>
                     </div>
                     <div class="col-12">
                         <strong>Descrizione: </strong> {{ project.description }}
