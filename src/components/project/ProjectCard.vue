@@ -5,7 +5,8 @@ export default {
     };
   },
   props: {
-    project: Object, 
+    project: Object,
+    isDetail: Boolean, 
   },
 };
 </script>
@@ -40,6 +41,19 @@ export default {
                     </div>
                     <div class="col-12">
                         <strong>Link: </strong> {{ project.link }}
+                    </div>
+                    <div class="card-footer">
+                        <router-link 
+                         v-if="!isDetail"
+                         :to="{
+                            name: 'project-detail',
+                            parms:{
+                             id:project.id,
+                            },
+                         }" 
+                         class="nav-link">
+                            Vedi Dettaglio
+                        </router-link>
                     </div>
                 </div>
             </div>
