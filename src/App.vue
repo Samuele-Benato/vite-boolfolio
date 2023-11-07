@@ -1,5 +1,6 @@
 <script>
 import NavbarUi from './components/ui/NavbarUi.vue';
+import { RouterView } from 'vue-router';
 
 export default {
     components: {
@@ -10,8 +11,8 @@ export default {
 </script>
 
 <template>
-  <RouterView/>
   <NavbarUi/>
+  <RouterView/>
 </template>
 
 <style scoped>

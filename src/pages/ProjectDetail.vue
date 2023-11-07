@@ -9,15 +9,18 @@ export default {
     }
   },
 
+
+
  components: {
     ProjectCard,
  },
 
   created() {
+    
     axios
-      .get('http://127.0.0.1:8000/api/projects' + this.$route.parms.id)
+      .get('http://127.0.0.1:8000/api/projects/' + this.$route.params.id)
       .then((response) => {
-        this.projects = response.data.data; 
+        this.project = response.data; 
       })
       .catch((error) => {
         console.error('Errore nella chiamata API', error);
@@ -27,7 +30,10 @@ export default {
 </script>
 
 <template>
-  <ProjectCard :project="project" :isDetail="true" v-if="project"/>
+    <div class="container my-3">
+        <h2>Dettaglio Progetto</h2>
+        <ProjectCard :project="project" :isDetail="true" v-if="project"/>
+    </div>
 </template>
 
 <style lang="scss" scoped></style>

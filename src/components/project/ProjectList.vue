@@ -42,11 +42,9 @@ export default {
 </script>
 
 <template>
-  <div class="container my-3">
     <h1 class="my-3">Elenco Progetti : </h1>
     <PaginationUi :pagination="pagination" @change-page="fetchProjects"/>
     <ProjectCard class="my-3" v-for="project in projects" :key="project.id" :project="project" />
-  </div>
 </template>
 
 <style lang="scss">

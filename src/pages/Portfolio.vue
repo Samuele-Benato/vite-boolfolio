@@ -14,7 +14,9 @@ export default {
 </script>
 
 <template>
-  <ProjectList/>
+    <div class="container my-3">
+        <ProjectList/>
+    </div>
 </template>
 
 <style lang="scss" scoped></style>

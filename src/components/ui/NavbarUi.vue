@@ -18,7 +18,9 @@ export default {
                 </router-link>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+                <router-link :to="{name: 'portfolio'}" class="nav-link">
+                    Portfolio
+                </router-link>
             </li>
           </ul>
           <form class="d-flex" role="search">

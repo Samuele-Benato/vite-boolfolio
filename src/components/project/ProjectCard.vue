@@ -42,17 +42,25 @@ export default {
                     <div class="col-12">
                         <strong>Link: </strong> {{ project.link }}
                     </div>
-                    <div class="card-footer">
+                    <div class="card-footer text-center">
                         <router-link 
                          v-if="!isDetail"
                          :to="{
                             name: 'project-detail',
-                            parms:{
+                            params:{
                              id:project.id,
                             },
                          }" 
-                         class="nav-link">
+                         class="btn btn-warning">
                             Vedi Dettaglio
+                        </router-link>
+                        <router-link 
+                         v-else
+                         :to="{
+                            name: 'portfolio',
+                         }" 
+                         class="btn btn-dark ">
+                            Ritorna alla lista
                         </router-link>
                     </div>
                 </div>
