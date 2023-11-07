@@ -1,11 +1,11 @@
 <script>
 import axios from 'axios';
 import ProjectCard from './ProjectCard.vue';
-import PaginationApp from '../ui/PaginationApp.vue';
+import PaginationUi from '../ui/PaginationUi.vue';
 export default {
     components: {
     ProjectCard,
-    PaginationApp
+    PaginationUi
   },
   data() {
     return {
@@ -44,7 +44,7 @@ export default {
 <template>
   <div class="container my-3">
     <h1 class="my-3">Elenco Progetti : </h1>
-    <PaginationApp :pagination="pagination" @change-page="fetchProjects"/>
+    <PaginationUi :pagination="pagination" @change-page="fetchProjects"/>
     <ProjectCard class="my-3" v-for="project in projects" :key="project.id" :project="project" />
   </div>
 </template>
