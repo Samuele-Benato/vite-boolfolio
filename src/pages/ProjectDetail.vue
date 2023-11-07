@@ -32,7 +32,10 @@ export default {
 <template>
     <div class="container my-3">
         <h2>Dettaglio Progetto</h2>
-        <ProjectCard :project="project" :isDetail="true" v-if="project"/>
+        <div class="d-flex align-items-center">
+          <img class="float-start me-2 mb-3 w-50" :src="'http://127.0.0.1:8000/storage/' + project.image" alt="project img">
+          <ProjectCard :project="project" :isDetail="true" v-if="project"/>
+        </div>
     </div>
 </template>
 
