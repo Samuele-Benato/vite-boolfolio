@@ -25,10 +25,15 @@ export default {
                         </div>
                     </div>
                     <div class="card-body m-0">
-                        <div class="col-md-6 col-12 d-inline-block my-2">
+                        <router-link :to="{
+                            name : 'project-by-type',
+                            params: {
+                                type_id: project.type_id
+                            }
+                        }" class="col-md-6 col-12 d-inline-block my-2">
                             <strong>Tipo: </strong>
                             {{ project.type ? project.type.label : 'Nessun type' }}
-                        </div>
+                        </router-link >
                         <div class="col-md-6 col-12 d-inline-block my-2">
                             <strong>Tecnologia: </strong>
                             <div v-for=" technology in project.technologies">
