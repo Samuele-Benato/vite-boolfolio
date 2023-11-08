@@ -4,11 +4,14 @@ export default {
     components: {
     ProjectCard,
   },
+
+  props:{
+      projects: Object,
+    },
 };
 </script>
 
 <template>
-    <h1 class="my-3">Elenco Progetti : </h1>
     <ProjectCard class="my-3" v-for="project in projects" :key="project.id" :project="project" />
 </template>
 

@@ -20,10 +20,7 @@ export default {
   
   methods:{
     fetchProjects(apiUri = 'http://127.0.0.1:8000/api/projects'){
-
-      axios
-      .get(apiUri)
-      .then((response) => {
+      axios.get(apiUri).then((response) => {
         console.log(response);
         this.projects = response.data.data;
         this.pagination.links = response.data.links; 
@@ -42,7 +39,8 @@ export default {
 
 <template>
   <div class="container my-3">
-    <ProjectList/>
+    <h1 class="my-3">Elenco Progetti : </h1>
+    <ProjectList :projects="projects"/>
     <PaginationUi :pagination="pagination" @change-page="fetchProjects"/>
   </div>
 </template>
