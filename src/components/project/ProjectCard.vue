@@ -25,7 +25,7 @@ export default {
                         </div>
                     </div>
                     <div class="card-body m-0">
-                        <router-link :to="{
+                        <router-link v-if="project.type_id" :to="{
                             name : 'project-by-type',
                             params: {
                                 type_id: project.type_id

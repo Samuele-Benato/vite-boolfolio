@@ -1,6 +1,7 @@
 <script>
 import ProjectTypeList from '../components/project/ProjectTypeList.vue'
-
+import PaginationUi from '../components/ui/PaginationUi.vue';
+import axios from 'axios'
 export default {
   data(){
     return{
@@ -9,25 +10,44 @@ export default {
       },
     }
   },
+
   components: {
     ProjectTypeList,
+    PaginationUi
   },
-created(){
-  axios.get( 'http://127.0.0.1:8000/api/projects' + 'types/' + this.$route.params.type_id
-  ).then((response)=>{
-    this.type = response.data;
-  })
-  .catch((error)=>{
-    console.error('Errore nella chiamata API', error);
-    this.$router.push({name : 'not-found'})
-  })
-}
+
+  methods : {
+    fetchProjects(endpoint = 'http://127.0.0.1:8000/api/' + 'project-by-type/' + this.type_id){
+        axios.get(endpoint).then((response)=>{
+        this.projects = response.data.data;
+        this.pagination.links = response.data.links
+      }).catch((error)=>{
+        console.error('Errore nella chiamata API', error);     
+        this.$router.push({name : 'not-found'})
+      })
+    },
+
+    fetchTypes(endpoint = 'http://127.0.0.1:8000/api/types/'+ this.$route.params.type_id){
+      axios.get(endpoint).then((response)=>{
+      console.log(response);
+      this.type = response.data.data;
+    }).catch((error)=>{
+      console.error('Errore nella chiamata API', error);
+      this.$router.push({name : 'not-found'})
+    })
+  }},
+
+  created(){
+  this.fetchProjects();
+  this.fetchTypes()
+  }
 };
 </script>
 
 <template>
   <div class="container my-3">
     <h2>Progetti {{ type.label }}</h2>
+    <PaginationUi :pagination="pagination" @change-page="fetchProjects"/>
     <ProjectTypeList :type_id="type.id" v-if="type.id"/>
   </div>
 </template>
