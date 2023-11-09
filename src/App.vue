@@ -3,10 +3,10 @@ import NavbarUi from './components/ui/NavbarUi.vue';
 import { RouterView } from 'vue-router';
 
 export default {
-  components: {
-    RouterView,
-    NavbarUi,
-  },
+  // components: {
+  //   RouterView,
+  //   NavbarUi,
+  // },
 }; 
 </script>
 

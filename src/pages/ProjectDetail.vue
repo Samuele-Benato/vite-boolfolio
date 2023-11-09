@@ -13,8 +13,6 @@ export default {
     }
   },
 
-
-
  components: {
     ProjectCard,
  },
@@ -37,7 +35,7 @@ export default {
 
 <template>
     <div class="container my-3">
-        <h2>Dettaglio Progetto</h2>
+        <h2 class="my-4">Dettaglio Progetto</h2>
         <!-- <div class="alert alert-danger" v-if="error.any">
           {{ error.message }}
         </div> -->

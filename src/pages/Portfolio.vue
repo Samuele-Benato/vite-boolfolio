@@ -2,6 +2,8 @@
 import ProjectList from "../components/project/ProjectList.vue";
 import PaginationUi from '../components/ui/PaginationUi.vue';
 import axios from 'axios';
+import NavbarUi from '../components/ui/NavbarUi.vue';
+import { RouterView } from 'vue-router';
 
 export default {
   data() {
@@ -15,7 +17,9 @@ export default {
 
   components: {
     ProjectList,
-    PaginationUi
+    PaginationUi,
+    RouterView,
+    NavbarUi,
   },
   
   methods:{
@@ -38,8 +42,11 @@ export default {
 </script>
 
 <template>
+  <NavbarUi/>
+  <RouterView/>
   <div class="container my-3">
-    <h1 class="my-3">Elenco Progetti : </h1>
+    <h1 class="my-3 text-center">Elenco Progetti : </h1>
+    <PaginationUi :pagination="pagination" @change-page="fetchProjects"/>
     <ProjectList :projects="projects"/>
     <PaginationUi :pagination="pagination" @change-page="fetchProjects"/>
   </div>

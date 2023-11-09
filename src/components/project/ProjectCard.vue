@@ -31,7 +31,7 @@ export default {
 
 <template>
     <div class=" d-flex align-items-center clearfix">
-        <div class="card p-3">  
+        <div class="card p-3 w-100">  
             <div class="row g-3 ">
                 <div class="card-header">
                     <div class="col-md-6 col-12 d-inline-block">
@@ -81,8 +81,9 @@ export default {
                             id:project.id,
                         },
                         }" 
-                        class="btn btn-warning">
-                        Vedi Dettaglio
+                        class="btn btn-primary">
+                        <font-awesome-icon class="ms-1" :icon="['fas', 'arrow-turn-up']" rotation=90 />
+                        <strong class="ms-1">Vedi Dettaglio</strong>
                     </router-link>
                     <router-link 
                         v-else
@@ -90,7 +91,8 @@ export default {
                         name: 'portfolio',
                         }" 
                         class="btn btn-dark ">
-                        Ritorna alla lista
+                        <font-awesome-icon :icon="['fas', 'list']" />
+                        <strong class="ms-1">Ritorna alla lista</strong>
                     </router-link>
                 </div>
             </div>
