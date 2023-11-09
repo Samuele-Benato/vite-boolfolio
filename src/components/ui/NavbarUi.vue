@@ -4,7 +4,7 @@ export default {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" >
       <div class="container-fluid">
         <router-link class="navbar-brand ms-2" :to="{name: 'home'}">
           <font-awesome-icon :icon="['fas', 'house']" />

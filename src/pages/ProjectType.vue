@@ -50,22 +50,29 @@ export default {
 </script>
 
 <template>
-  <div class="container my-3">
-    <div class="d-flex align-items-center justify-content-between">
-      <h2 class="text-center">Progetti <strong>{{ type.label }}</strong></h2>
-      <router-link         
-        :to="{
-        name: 'portfolio',
-        }" 
-        class="btn btn-dark ">
-        <font-awesome-icon :icon="['fas', 'list']" />
-        <strong class="ms-1">Ritorna alla lista</strong>
-      </router-link>
+  <div class="bg-type">
+    <div class="container py-3">
+      <div class="d-flex align-items-center justify-content-between">
+        <h2 class="text-center text-white">Progetti <strong>{{ type.label }}</strong></h2>
+        <router-link         
+          :to="{
+          name: 'portfolio',
+          }" 
+          class="btn btn-dark ">
+          <font-awesome-icon :icon="['fas', 'list']" />
+          <strong class="ms-1">Ritorna alla lista</strong>
+        </router-link>
+      </div>
+      <PaginationUi :pagination="pagination" @change-page="fetchProjects"/>
+      <ProjectList :projects="projects"/>
+      <PaginationUi :pagination="pagination" @change-page="fetchProjects"/>
     </div>
-    <PaginationUi :pagination="pagination" @change-page="fetchProjects"/>
-    <ProjectList :projects="projects"/>
-    <PaginationUi :pagination="pagination" @change-page="fetchProjects"/>
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+.bg-type{
+  background-image: url('../../public/IMG/bg-type.jpg');
+  height: 100%;
+}
+</style>

@@ -14,12 +14,12 @@ export default {
 </script>
 
 <template>
-    <h1 class="py-4 text-center bg-black text-white">Il mio percorso a Boolean <font-awesome-icon :icon="['fas', 'computer']" /></h1>
+  <div class="bg-home">
+    <h1 class="py-4 text-center color-text">Il mio percorso a Boolean <font-awesome-icon :icon="['fas', 'computer']" /></h1>
     <div class="container my-3 d-flex justify-content-center">
       <AppSlider/>
     </div>
-    <div class="row py-2 bg-black text-white justify-content-center">
-
+    <div class="row py-2 color-text justify-content-center">
       <div class="col-4 ms-auto">
         <h5 >
           Contatti:
@@ -39,6 +39,16 @@ export default {
         </p>
       </div>
     </div>
+  </div>   
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" >
+.bg-home{
+  background-image: url('../../public/IMG/bg-home.jpg');
+  height: 100%;
+}
+.color-text{
+  background: #222222;
+  color:#EAEAEA ;
+}
+</style>

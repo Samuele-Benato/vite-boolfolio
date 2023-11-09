@@ -101,5 +101,8 @@ export default {
 </template>
 
 <style lang="scss">
- 
+ .card{
+    background-image: url('../../public/IMG/bg-card.jpg');
+    height: 100%;
+ }
 </style>

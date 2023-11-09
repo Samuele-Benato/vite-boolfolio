@@ -42,14 +42,21 @@ export default {
 </script>
 
 <template>
-  <NavbarUi/>
-  <RouterView/>
-  <div class="container my-3">
-    <h1 class="my-3 text-center">Elenco Progetti : </h1>
-    <PaginationUi :pagination="pagination" @change-page="fetchProjects"/>
-    <ProjectList :projects="projects"/>
-    <PaginationUi :pagination="pagination" @change-page="fetchProjects"/>
-  </div>
+  <div class="bg-portfolio">
+    <NavbarUi/>
+    <RouterView/>
+    <div class="container my-3">
+      <h1 class="my-3 text-center text-white">Elenco Progetti : </h1>
+      <PaginationUi :pagination="pagination" @change-page="fetchProjects"/>
+      <ProjectList :projects="projects"/>
+      <PaginationUi :pagination="pagination" @change-page="fetchProjects"/>
+    </div>
+  </div>   
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss">
+.bg-portfolio{
+  background-image: url('../../public/IMG/bg-portfolio.jpg');
+  height:100%;
+}
+</style>

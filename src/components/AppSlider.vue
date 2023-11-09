@@ -101,19 +101,20 @@ export default {
   width: 700px;
   height: 700px;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .item .text {
   min-width: 370px;
-  width: 100%;
   position: absolute;
-  left: 0%;
-  bottom: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 5%;
   padding: 1rem;
 
   border-radius: 5px;
-  background-color: rgba($color: black, $alpha: 0.8);
-  color: white;
+  background-color: rgba($color: #222222, $alpha: 0.8);
+  color: #EAEAEA;
   font-weight: 600;
   text-align: center;
 }

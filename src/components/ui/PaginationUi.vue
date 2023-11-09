@@ -18,7 +18,7 @@ export default {
 </script>
 
 <template>
-    <nav aria-label="..." class="my-3 ">
+    <nav aria-label="..." class="py-3 ">
         <ul class="pagination justify-content-center">
             <li 
             class="page-item " 

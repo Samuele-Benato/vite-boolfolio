@@ -34,8 +34,9 @@ export default {
 </script>
 
 <template>
+  <div class="bg-detail">
     <div class="container my-3">
-        <h2 class="my-4">Dettaglio Progetto</h2>
+        <h2 class="py-4 text-white">Dettaglio Progetto</h2>
         <!-- <div class="alert alert-danger" v-if="error.any">
           {{ error.message }}
         </div> -->
@@ -44,6 +45,12 @@ export default {
           <ProjectCard :project="project" :isDetail="true" v-if="project"/>
         </div>
     </div>
+  </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" >
+.bg-detail{
+  background-image: url('../../public/IMG/bg-detail.png');
+  height: 100vh;
+}
+</style>
