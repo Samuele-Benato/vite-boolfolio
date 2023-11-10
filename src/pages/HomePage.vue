@@ -33,10 +33,17 @@ export default {
         <h5>
           Social :
         </h5>
-        <p>
-          <font-awesome-icon :icon="['fab', 'instagram']" /> samuele_benato_ <br>
-          <font-awesome-icon :icon="['fab', 'linkedin']" /> samuele.benato
-        </p>
+        <div class="social-links">
+          <a href="#">
+            <font-awesome-icon :icon="['fab', 'instagram']" /> samuele_benato_ 
+          </a>
+          <a href="#">
+            <font-awesome-icon :icon="['fab', 'linkedin']" /> samuele.benato
+          </a>
+          <a href="https://github.com/Samuele-Benato"> 
+            <font-awesome-icon :icon="['fab', 'github']" /> Samuele-Benato         
+          </a>
+        </div>
       </div>
     </div>
   </div>   
@@ -48,7 +55,15 @@ export default {
   height: 100%;
 }
 .color-text{
-  background: #222222;
+  background-color: rgba($color: #222222, $alpha: 0.9);
   color:#EAEAEA ;
+}
+.social-links{
+  display: flex;
+  flex-direction: column;
+    a{
+      color: #EAEAEA;
+      text-decoration: none;
+    }
 }
 </style>

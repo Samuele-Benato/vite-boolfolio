@@ -44,24 +44,23 @@ export default {
                 <div class="card-body m-0">
                     <div class="row">
                         <router-link v-if="project.type_id" 
-                        :to="{
-                        name : 'project-by-type',
-                        params: {type_id: project.type_id}
-                        }" 
-                        class="col-md-6 col-12 d-inline-block my-2 "
-                        >
-                        <span :class="getBadgeColorClass(project.type_id)" class="badge">
-                            <strong>Tipo: </strong>
-                            {{ project.type ? project.type.label : 'Nessun type' }}
-                        </span>
-
-                    </router-link >
-                    <div class="col-md-6 col-12 d-inline-block my-2">
-                        <strong>Tecnologia: </strong>
-                        <div v-for=" technology in project.technologies">
-                            {{ technology.label }} 
+                            :to="{
+                            name : 'project-by-type',
+                            params: {type_id: project.type_id}
+                            }" 
+                            class="col-md-6 col-12 d-inline-block my-2 "
+                            >
+                            <span :class="getBadgeColorClass(project.type_id)" class="badge">
+                                <strong>Tipo: </strong>
+                                {{ project.type ? project.type.label : 'Nessun type' }}
+                            </span>
+                        </router-link >
+                        <div class="col-md-6 col-12 d-inline-block my-2">
+                            <strong>Tecnologia: </strong>
+                            <div v-for=" technology in project.technologies">
+                                {{ technology.label }} 
+                            </div>
                         </div>
-                    </div>
                     </div>
                     
                     <div class="my-2">

@@ -98,7 +98,7 @@ export default {
 
 .item img {
  margin: 0 auto;
-  width: 700px;
+  width: 800px;
   height: 700px;
   object-fit: cover;
   border-radius: 10px;
@@ -113,8 +113,8 @@ export default {
   padding: 1rem;
 
   border-radius: 5px;
-  background-color: rgba($color: #222222, $alpha: 0.8);
-  color: #EAEAEA;
+  background-color: rgba($color:#EAEAEA , $alpha: 0.5);
+  color: #222222;
   font-weight: 600;
   text-align: center;
 }
@@ -129,15 +129,15 @@ export default {
   cursor: pointer;
   z-index: 999;
 }
-.next {
+.prev{
   bottom: 50%;
   left: 5%;
 }
-.prev {
+.next  {
   bottom: 50%;
   right: 5%;
 }
-.prev::after {
+.next::after {
   content: "";
   width: 15px;
   height: 15px;
@@ -149,7 +149,7 @@ export default {
   left: 50%;
   transform: translate(-50%) rotate(45deg);
 }
-.next::before {
+.prev::before {
   content: "";
   width: 15px;
   height: 15px;

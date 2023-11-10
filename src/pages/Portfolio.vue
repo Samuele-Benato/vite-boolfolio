@@ -47,6 +47,20 @@ export default {
     <RouterView/>
     <div class="container my-3">
       <h1 class="my-3 text-center text-white">Elenco Progetti : </h1>
+      <!-- <router-link 
+        v-for="project in projects"
+        v-show="project.type_id" 
+        :to="{
+        name : 'project-by-type',
+        params: {type_id: project.type_id}
+        }" 
+        class="my-2 "
+        >
+        <span :class="getBadgeColorClass(project.type_id)" class="badge">
+            <strong>Tipo: </strong>
+            {{ project.type ? project.type.label : 'Nessun type' }}
+        </span>
+      </router-link > -->
       <PaginationUi :pagination="pagination" @change-page="fetchProjects"/>
       <ProjectList :projects="projects"/>
       <PaginationUi :pagination="pagination" @change-page="fetchProjects"/>

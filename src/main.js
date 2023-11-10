@@ -10,7 +10,7 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faArrowTurnUp, faList, faHouse, faEnvelope, faPhone, faComputer } from '@fortawesome/free-solid-svg-icons'
-import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram, faLinkedin,faGithub } from '@fortawesome/free-brands-svg-icons'
 
 library.add(
     faArrowTurnUp,
@@ -21,6 +21,7 @@ library.add(
     faComputer,
     faInstagram,
     faLinkedin,
+    faGithub,
     )
 
 import App from './App.vue'
