@@ -51,7 +51,7 @@ export default {
 
 <style lang="scss" >
 .bg-home{
-  background-image: url('../../public/IMG/bg-home.jpg');
+  background-image: url('../../public/IMG/bg-card.jpg');
   height: 100%;
 }
 .color-text{
